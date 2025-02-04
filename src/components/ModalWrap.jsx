@@ -12,7 +12,7 @@ const customStylesModal = {
 
 Modal.setAppElement("#root");
 
-function ModalWrap({ isModalOpen, onCloseModal, children }) {
+const ModalWrap = ({ isModalOpen, onCloseModal, children }) => {
   return (
     <Modal
       isOpen={isModalOpen}
@@ -22,6 +22,6 @@ function ModalWrap({ isModalOpen, onCloseModal, children }) {
       {children}
     </Modal>
   );
-}
+};
 
 export default ModalWrap;

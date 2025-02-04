@@ -6,14 +6,20 @@ const rotate = keyframes`
   }
 `;
 
-const Spinner = styled.div`
+const SpinnerWrap = styled.div`
   position: fixed;
-  top: 50%;
-  left: 50%;
+  inset: 0;
   z-index: 9999;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(1px);
+`;
+
+const StyledSpinner = styled.div`
   width: 4rem;
-  margin-top: -32px;
-  margin-left: -32px;
   aspect-ratio: 1;
   border-radius: 50%;
   background: radial-gradient(farthest-side, var(--color-brand-600) 94%, #0000)
@@ -22,5 +28,13 @@ const Spinner = styled.div`
   -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 10px), #000 0);
   animation: ${rotate} 1.5s infinite linear;
 `;
+
+const Spinner = () => {
+  return (
+    <SpinnerWrap>
+      <StyledSpinner />
+    </SpinnerWrap>
+  );
+};
 
 export default Spinner;

@@ -14,7 +14,7 @@ const StyledHeader = styled.header`
   margin: 0 auto;
 `;
 
-function Header() {
+const Header = () => {
   const { resetDatabase } = seminarsStore;
 
   return (
@@ -29,6 +29,6 @@ function Header() {
       </Button>
     </StyledHeader>
   );
-}
+};
 
 export default Header;

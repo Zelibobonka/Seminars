@@ -19,7 +19,7 @@ const Container = styled.div`
   padding: 1.2rem 1.2rem 2rem;
 `;
 
-function AppLayout() {
+const AppLayout = () => {
   return (
     <StyledAppLayout>
       <Header />
@@ -30,6 +30,6 @@ function AppLayout() {
       </Main>
     </StyledAppLayout>
   );
-}
+};
 
 export default AppLayout;
